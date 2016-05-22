@@ -248,13 +248,13 @@ void loop() {
       case 96:
         // `
         pressFour();
-        pressSpace();
+        pressC();
         pressR();
         break;
       case 126:
         // ~
         pressFour();
-        pressSpace();
+        pressC();
         pressF();
         break;
       case 49:
@@ -335,7 +335,7 @@ void loop() {
         pressC();
         pressC();
         break;
-      case 58:
+      case 48:
         // 0
         pressF();
         pressC();
@@ -343,14 +343,14 @@ void loop() {
         break;
       case 94:
         // ^
-        pressF();
-        pressC();
+        pressR();
+        pressSpace();
         pressR();
         break;
       case 38:
         // &
-        pressF();
-        pressC();
+        pressR();
+        pressSpace();
         pressF();
         break;
       case 42:
@@ -361,8 +361,8 @@ void loop() {
         break;
       case 40:
         // (
-        pressF();
-        pressC();
+        pressR();
+        pressSpace();
         pressSpace();
         break;
       case 33:
@@ -388,12 +388,6 @@ void loop() {
         pressF();
         pressSpace();
         pressSpace();
-        break;
-      case 95:
-        // _
-        pressC();
-        pressC();
-        pressFour();
         break;
       case 123:
         // {
