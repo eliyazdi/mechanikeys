@@ -9,7 +9,7 @@ int f = 75;
 int c = 65;
 int space = 55;
 int pushDown = 99;
-int waitTime = 400;
+int waitTime = 600;
 int shortWait = 100;
 int pushPos = 117;
 
@@ -357,8 +357,8 @@ void loop() {
         break;
       case 42:
         // *
-        pressR();
-        pressSpace();
+        pressF();
+        pressC();
         pressC();
         break;
       case 40:
