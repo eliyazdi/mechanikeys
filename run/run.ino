@@ -10,15 +10,17 @@ int c = 65;
 int space = 55;
 int pushDown = 99;
 int waitTime = 400;
+int shortWait = 100;
+int pushPos = 117;
 
 int pressFour(){
       myservo1.write(four);
       delay(waitTime);
 
       myservo2.write(pushDown);
-      delay(100);
-      myservo2.write(117);
-      delay(100);
+      delay(shortWait);
+      myservo2.write(pushPos);
+      delay(shortWait);
       return 0;
   }
 
@@ -27,9 +29,9 @@ int pressR(){
       delay(waitTime);
 
       myservo2.write(pushDown);
-      delay(100);
-      myservo2.write(117);
-      delay(100);
+      delay(shortWait);
+      myservo2.write(pushPos);
+      delay(shortWait);
   }
 
 int pressF(){
@@ -37,9 +39,9 @@ int pressF(){
       delay(waitTime);
 
       myservo2.write(pushDown);
-      delay(100);
-      myservo2.write(117);
-      delay(100);
+      delay(shortWait);
+      myservo2.write(pushPos);
+      delay(shortWait);
   }
 
 int pressC(){
@@ -47,9 +49,9 @@ int pressC(){
       delay(waitTime);
 
       myservo2.write(pushDown);
-      delay(100);
-      myservo2.write(117);
-      delay(100);
+      delay(shortWait);
+      myservo2.write(pushPos);
+      delay(shortWait);
   }
 
 int pressSpace(){
@@ -57,16 +59,16 @@ int pressSpace(){
       delay(waitTime);
 
       myservo2.write(pushDown);
-      delay(100);
-      myservo2.write(117);
-      delay(100);
+      delay(shortWait);
+      myservo2.write(pushPos);
+      delay(shortWait);
 
 }
 int incomingByte = 0;
-void setup() { 
+void setup() {
   myservo1.attach(9);
   myservo2.attach(5);
-  myservo2.write(117);
+  myservo2.write(pushPos);
   Serial.begin(9600);
 }
 
