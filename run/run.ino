@@ -63,7 +63,7 @@ int pressSpace(){
 
 }
 int incomingByte = 0;
-void setup() {
+void setup() { 
   myservo1.attach(9);
   myservo2.attach(5);
   myservo2.write(117);
@@ -430,6 +430,7 @@ void loop() {
         pressSpace();
         pressC();
         pressC();
+        break;
       case 34:
         // "
         pressSpace();
