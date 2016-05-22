@@ -357,8 +357,8 @@ void loop() {
         break;
       case 42:
         // *
-        pressF();
-        pressC();
+        pressR();
+        pressSpace();
         pressC();
         break;
       case 40:
