@@ -415,8 +415,8 @@ void loop() {
         pressC();
         pressSpace();
         break;
-      case 124:
-        // |
+      case 10:
+        // newline
         pressSpace();
         pressC();
         pressR();
