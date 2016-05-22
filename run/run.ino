@@ -438,6 +438,13 @@ void loop() {
         pressSpace();
         pressC();
         pressSpace();
+        break;
+      case 63:
+        // ?
+        pressSpace();
+        pressSpace();
+        pressSpace();
+        break;
       default:
         Serial.println(incomingByte);
         break;
