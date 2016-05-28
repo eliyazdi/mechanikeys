@@ -13,57 +13,16 @@ int waitTime = 400;
 int shortWait = 100;
 int pushPos = 117;
 
-int pressFour(){
-      myservo1.write(four);
-      delay(waitTime);
-
-      myservo2.write(pushDown);
-      delay(shortWait);
-      myservo2.write(pushPos);
-      delay(shortWait);
-      return 0;
+int pressChar(int whichChar){
+  myservo1.write(whichChar);
+  delay(waitTime);
+  myservo2.write(pushDown);
+  delay(shortWait);
+  myservo2.write(pushPos);
+  delay(shortWait);
   }
 
-int pressR(){
-      myservo1.write(r);
-      delay(waitTime);
 
-      myservo2.write(pushDown);
-      delay(shortWait);
-      myservo2.write(pushPos);
-      delay(shortWait);
-  }
-
-int pressF(){
-      myservo1.write(f);
-      delay(waitTime);
-
-      myservo2.write(pushDown);
-      delay(shortWait);
-      myservo2.write(pushPos);
-      delay(shortWait);
-  }
-
-int pressC(){
-      myservo1.write(c);
-      delay(waitTime);
-
-      myservo2.write(pushDown);
-      delay(shortWait);
-      myservo2.write(pushPos);
-      delay(shortWait);
-  }
-
-int pressSpace(){
-      myservo1.write(space);
-      delay(waitTime);
-
-      myservo2.write(pushDown);
-      delay(shortWait);
-      myservo2.write(pushPos);
-      delay(shortWait);
-
-}
 int incomingByte = 0;
 void setup() {
   myservo1.attach(9);
@@ -78,372 +37,372 @@ void loop() {
     switch (incomingByte){
       case 113:
         // q
-        pressC();
-        pressR();
+        pressChar(c);
+        pressChar(r);
         break;
       case 119:
         // w
-        pressSpace();
-        pressC();
-        pressFour();
+        pressChar(space);
+        pressChar(c);
+        pressChar(four);
         break;
       case 101:
         // e
-        pressFour();
-        pressSpace();
-        pressFour();
+        pressChar(four);
+        pressChar(space);
+        pressChar(four);
         break;
       case 114:
         // r
-        pressC();
-        pressF();
+        pressChar(c);
+        pressChar(f);
         break;
       case 116:
         // t
-        pressSpace();
-        pressFour();
+        pressChar(space);
+        pressChar(four);
         break;
       case 121:
         // y
-        pressSpace();
-        pressSpace();
-        pressR();
+        pressChar(space);
+        pressChar(space);
+        pressChar(r);
         break;
       case 117:
         // u
-        pressSpace();
-        pressR();
+        pressChar(space);
+        pressChar(r);
         break;
       case 105:
         // i
-        pressR();
-        pressC();
-        pressFour();
+        pressChar(r);
+        pressChar(c);
+        pressChar(four);
         break;
       case 111:
         // o
-        pressF();
-        pressSpace();
-        pressFour();
+        pressChar(f);
+        pressChar(space);
+        pressChar(four);
         break;
       case 112:
         // p
-        pressC();
-        pressFour();
+        pressChar(c);
+        pressChar(four);
         break;
       case 97:
         // a
-        pressFour();
-        pressFour();
+        pressChar(four);
+        pressChar(four);
         break;
       case 115:
         // s
-        pressC();
-        pressSpace();
-        pressFour();
+        pressChar(c);
+        pressChar(space);
+        pressChar(four);
         break;
       case 100:
         // d
-        pressFour();
-        pressC();
-        pressFour();
+        pressChar(four);
+        pressChar(c);
+        pressChar(four);
         break;
       case 102:
         // f
-        pressR();
-        pressFour();
+        pressChar(r);
+        pressChar(four);
         break;
       case 103:
         // g
-        pressR();
-        pressR();
+        pressChar(r);
+        pressChar(r);
         break;
       case 104:
         // h
-        pressR();
-        pressF();
+        pressChar(r);
+        pressChar(f);
         break;
       case 106:
         // j
-        pressR();
-        pressSpace();
-        pressFour();
+        pressChar(r);
+        pressChar(space);
+        pressChar(four);
         break;
       case 107:
         // k
-        pressF();
-        pressFour();
+        pressChar(f);
+        pressChar(four);
         break;
       case 108:
         // l
-        pressF();
-        pressR();
+        pressChar(f);
+        pressChar(r);
         break;
       case 122:
         // z
-        pressSpace();
-        pressSpace();
-        pressF();
+        pressChar(space);
+        pressChar(space);
+        pressChar(f);
         break;
       case 120:
         // x
-        pressSpace();
-        pressSpace();
-        pressFour();
+        pressChar(space);
+        pressChar(space);
+        pressChar(four);
         break;
       case 99:
         // c
-        pressFour();
-        pressF();
+        pressChar(four);
+        pressChar(f);
         break;
       case 118:
         // v
-        pressSpace();
-        pressF();
+        pressChar(space);
+        pressChar(f);
         break;
       case 98:
         // b
-        pressFour();
-        pressR();
+        pressChar(four);
+        pressChar(r);
         break;
       case 110:
         // n
-        pressF();
-        pressC();
-        pressFour();
+        pressChar(f);
+        pressChar(c);
+        pressChar(four);
         break;
       case 109:
         // m
-        pressF();
-        pressF();
+        pressChar(f);
+        pressChar(f);
         break;
       case 32:
         // space
-        pressSpace();
-        pressSpace();
-        pressC();
+        pressChar(space);
+        pressChar(space);
+        pressChar(c);
         break;
       case 46:
         // .
-        pressC();
-        pressSpace();
-        pressR();
+        pressChar(c);
+        pressChar(space);
+        pressChar(r);
         break;
       case 44:
         // ,
-        pressC();
-        pressSpace();
-        pressF();
+        pressChar(c);
+        pressChar(space);
+        pressChar(f);
         break;
       case 47:
         // /
-        pressC();
-        pressSpace();
-        pressC();
+        pressChar(c);
+        pressChar(space);
+        pressChar(c);
         break;
       case 59:
         // ;
-        pressC();
-        pressSpace();
-        pressSpace();
+        pressChar(c);
+        pressChar(space);
+        pressChar(space);
         break;
       case 96:
         // `
-        pressFour();
-        pressC();
-        pressR();
+        pressChar(four);
+        pressChar(c);
+        pressChar(r);
         break;
       case 126:
         // ~
-        pressFour();
-        pressC();
-        pressF();
+        pressChar(four);
+        pressChar(c);
+        pressChar(f);
         break;
       case 49:
         // 1
-        pressFour();
-        pressC();
-        pressC();
+        pressChar(four);
+        pressChar(c);
+        pressChar(c);
         break;
       case 50:
         // 2
-        pressFour();
-        pressC();
-        pressSpace();
+        pressChar(four);
+        pressChar(c);
+        pressChar(space);
         break;
       case 41:
         // )
-        pressFour();
-        pressSpace();
-        pressR();
+        pressChar(four);
+        pressChar(space);
+        pressChar(r);
         break;
       case 95:
         // _
-        pressFour();
-        pressSpace();
-        pressF();
+        pressChar(four);
+        pressChar(space);
+        pressChar(f);
         break;
       case 43:
         // +
-        pressFour();
-        pressSpace();
-        pressC();
+        pressChar(four);
+        pressChar(space);
+        pressChar(c);
         break;
       case 61:
         // =
-        pressFour();
-        pressSpace();
-        pressSpace();
+        pressChar(four);
+        pressChar(space);
+        pressChar(space);
         break;
       case 51:
         // 3
-        pressR();
-        pressC();
-        pressR();
+        pressChar(r);
+        pressChar(c);
+        pressChar(r);
         break;
       case 52:
         // 4
-        pressR();
-        pressC();
-        pressF();
+        pressChar(r);
+        pressChar(c);
+        pressChar(f);
         break;
       case 53:
         // 5
-        pressR();
-        pressC();
-        pressC();
+        pressChar(r);
+        pressChar(c);
+        pressChar(c);
         break;
       case 54:
         // 6
-        pressR();
-        pressC();
-        pressSpace();
+        pressChar(r);
+        pressChar(c);
+        pressChar(space);
         break;
       case 55:
         // 7
-        pressF();
-        pressC();
-        pressR();
+        pressChar(f);
+        pressChar(c);
+        pressChar(r);
         break;
       case 56:
         // 8
-        pressF();
-        pressC();
-        pressF();
+        pressChar(f);
+        pressChar(c);
+        pressChar(f);
         break;
       case 57:
         // 9
-        pressF();
-        pressC();
-        pressC();
+        pressChar(f);
+        pressChar(c);
+        pressChar(c);
         break;
       case 48:
         // 0
-        pressF();
-        pressC();
-        pressSpace();
+        pressChar(f);
+        pressChar(c);
+        pressChar(space);
         break;
       case 94:
         // ^
-        pressR();
-        pressSpace();
-        pressR();
+        pressChar(r);
+        pressChar(space);
+        pressChar(r);
         break;
       case 38:
         // &
-        pressR();
-        pressSpace();
-        pressF();
+        pressChar(r);
+        pressChar(space);
+        pressChar(f);
         break;
       case 42:
         // *
-        pressF();
-        pressC();
-        pressC();
+        pressChar(f);
+        pressChar(c);
+        pressChar(c);
         break;
       case 40:
         // (
-        pressR();
-        pressSpace();
-        pressSpace();
+        pressChar(r);
+        pressChar(space);
+        pressChar(space);
         break;
       case 33:
         // !
-        pressF();
-        pressSpace();
-        pressR();
+        pressChar(f);
+        pressChar(space);
+        pressChar(r);
         break;
       case 64:
         // @
-        pressF();
-        pressSpace();
-        pressF();
+        pressChar(f);
+        pressChar(space);
+        pressChar(f);
         break;
       case 35:
         // #
-        pressF();
-        pressSpace();
-        pressC();
+        pressChar(f);
+        pressChar(space);
+        pressChar(c);
         break;
       case 36:
         // $
-        pressF();
-        pressSpace();
-        pressSpace();
+        pressChar(f);
+        pressChar(space);
+        pressChar(space);
         break;
       case 123:
         // {
-        pressC();
-        pressC();
-        pressR();
+        pressChar(c);
+        pressChar(c);
+        pressChar(r);
         break;
       case 125:
         // }
-        pressC();
-        pressC();
-        pressF();
+        pressChar(c);
+        pressChar(c);
+        pressChar(f);
         break;
       case 91:
         // [
-        pressC();
-        pressC();
-        pressC();
+        pressChar(c);
+        pressChar(c);
+        pressChar(c);
         break;
       case 93:
         // ]
-        pressC();
-        pressC();
-        pressSpace();
+        pressChar(c);
+        pressChar(c);
+        pressChar(space);
         break;
       case 10:
         // newline
-        pressSpace();
-        pressC();
-        pressR();
+        pressChar(space);
+        pressChar(c);
+        pressChar(r);
         break;
       case 92:
         // backslash
-        pressSpace();
-        pressC();
-        pressF();
+        pressChar(space);
+        pressChar(c);
+        pressChar(f);
         break;
       case 58:
         // :
-        pressSpace();
-        pressC();
-        pressC();
+        pressChar(space);
+        pressChar(c);
+        pressChar(c);
         break;
       case 34:
         // "
-        pressSpace();
-        pressC();
-        pressSpace();
+        pressChar(space);
+        pressChar(c);
+        pressChar(space);
         break;
       case 63:
         // ?
-        pressSpace();
-        pressSpace();
-        pressSpace();
+        pressChar(space);
+        pressChar(space);
+        pressChar(space);
         break;
       default:
         Serial.println(incomingByte);
